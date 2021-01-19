@@ -117,7 +117,7 @@ class UsuarioController extends Controller
     public function destroy($id)
     {
         try {
-            $usuario = Usuario::find(1);
+            $usuario = Usuario::find($id);
             $usuario->delete();
 
             return response()->success([], "User delete");
